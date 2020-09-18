@@ -12,7 +12,7 @@ In this project the Machine Learning Microservice API is given and the scope is 
 
 * Dockerfile:
 
-This file is used for building a docker container.
+This file is used for building a docker container for the app.
 
 * Makefile: 
 
@@ -20,7 +20,7 @@ This file is used for automatize the execution of some functions like installing
 
 * run_docker.sh
 
-This is script is for running the application as a docker container locally.
+This is script is for running the app as a docker container locally.
 
 * upload_docker.sh 
 
@@ -47,10 +47,9 @@ This script is to make a request to the model to get a prediction.
 
 - Software requirements: pylint, Python3 and curl.
 
- 1. Create a virtualenv and activate it: python3 -m venv ~/.devops & source ~/.devops/bin/activate
+1. Create a virtualenv and activate it: python3 -m venv ~/.devops & source ~/.devops/bin/activate
 2. Install the necessary dependencies: make install
 3. Run the app: python3 app.py
-
 4. Make a prediction: ./make_prediction ( change port form PORT=8000 to PORT=80 )
 
 ### Running the app as docker container locally
