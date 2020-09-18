@@ -55,7 +55,7 @@ This script is to make a request to the model to get a prediction.
     source ~/.devops/bin/activate
 2. Install the necessary dependencies:
     make install
-3. Run the app.
+3. Run the app:
     python3 app.py
 
 4. Make a prediction:
@@ -88,7 +88,7 @@ This script is to make a request to the model to get a prediction.
 
 1. Upload the container to docker hub:
     ./upload_docker.sh
-2. Deploy and run the app with kubernetes
+2. Deploy and run the app with kubernetes:
     ./run_kubernetes.sh
 3. Make a prediction:
     ./make_prediction ( keep original PORT=8000 )
