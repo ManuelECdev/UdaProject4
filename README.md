@@ -1,5 +1,4 @@
-[![manuelecdev](https://circleci.com/gh/manuelecdev/UdaProject4
-.svg?style=svg)](<LINK>)
+[![manuelecdev](https://circleci.com/gh/manuelecdev/UdaProject4.svg?style=svg)](<LINK>)
 
 ## Project Overview
 
