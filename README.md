@@ -1,41 +1,93 @@
 [![ManuelECdev](https://circleci.com/gh/ManuelECdev/UdaProject4.svg?style=svg)](https://circleci.com/gh/ManuelECdev/UdaProject4)
 
-## Project Overview
+## Project summary
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
+The project's scope is to operationalize a Machine Learning Microservice API. 
 
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+The model has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. 
 
-### Project Tasks
+In this project the Machine Learning Microservice API is given and the scope is to implement a Dockerfile, Makefile, run_docker.sh, run_kubernetes.sh, upload_docker.sh and .circleci/config.yml
 
-Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
-* Test your project code using linting
-* Complete a Dockerfile to containerize this application
-* Deploy your containerized application using Docker and make a prediction
-* Improve the log statements in the source code for this application
-* Configure Kubernetes and create a Kubernetes cluster
-* Deploy a container using Kubernetes and make a prediction
-* Upload a complete Github repo with CircleCI to indicate that your code has been tested
+## Files 
+
+* Dockerfile:
+
+This file is used for building a docker container.
+
+* Makefile: 
+
+This file is used for automatize the execution of some functions like installing dependencies, running circleci locally, lint etc...
+
+* run_docker.sh
+
+This is script is for running the application as a docker container locally.
+
+* upload_docker.sh 
+
+This script is for uploading the docker container to docker hub.
+
+* run_kubernetes.sh
+
+This script is for depploying the app in a kubernetes cluster locally.
+
+* requirements.txt
+
+This file is for defining the required dependecies.
+
+* .circleci/config.yml
+
+This is file is used to give continuous integration capabilities to the app.
+
+* make_prediction.sh
+
+This is sript to make a request to the model to get a prediction.
 
 
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
+## Run the app locally as standalone.
+
+- Software requirements:
+    Python3
+    curl
+
+ 1. Create a virtualenv and activate it:
+    python3 -m venv ~/.devops
+    source ~/.devops/bin/activate
+2. Install the necessary dependencies:
+    make install
+3. Run the app.
+    python3 app.py
+
+4. Make a prediction:
+    ./make_prediction ( change port form PORT=8000 to PORT=80 )
+
+### Running the app as docker container locally
+
+- Software requirements:
+    Docker
+    curl
+
+1. Run in Docker:  
+    ./run_docker.sh
+2. Make a prediction:
+    ./make_prediction ( keep original PORT=8000 )
+
+### deploying and running the app to a  kubernetes cluster locally
+
+ - Software requirements:
+    Docker
+    Minikube
+    Kubernetes
+    curl
+    Docker Hub account
+
+ -  Other requirements:
+    The container have to be build previusly with:
+        docker build --tag=udaproject4 .
 
 
-
-## Setup the Environment
-
-* Create a virtualenv and activate it
-* Run `make install` to install the necessary dependencies
-
-### Running `app.py`
-
-1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
-
-### Kubernetes Steps
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+1. Upload the container to docker hub:
+    ./upload_docker.sh
+2. Deploy and run the app with kubernetes
+    ./run_kubernetes.sh
+3. Make a prediction:
+    ./make_prediction ( keep original PORT=8000 )
