@@ -45,50 +45,26 @@ This script is to make a request to the model to get a prediction.
 
 ## Run the app locally as standalone.
 
-- Software requirements:
-    pylint
-    Python3
-    curl
+- Software requirements: pylint, Python3 and curl.
 
- 1. Create a virtualenv and activate it:
-    python3 -m venv ~/.devops
-    source ~/.devops/bin/activate
-2. Install the necessary dependencies:
-    make install
-3. Run the app:
-    python3 app.py
+ 1. Create a virtualenv and activate it: python3 -m venv ~/.devops & source ~/.devops/bin/activate
+2. Install the necessary dependencies: make install
+3. Run the app: python3 app.py
 
-4. Make a prediction:
-    ./make_prediction ( change port form PORT=8000 to PORT=80 )
+4. Make a prediction: ./make_prediction ( change port form PORT=8000 to PORT=80 )
 
 ### Running the app as docker container locally
 
-- Software requirements:
-    Docker
-    curl
+- Software requirements: Docker and curl.
 
-1. Run in Docker:  
-    ./run_docker.sh
-2. Make a prediction:
-    ./make_prediction ( keep original PORT=8000 )
+1. Run in Docker:  ./run_docker.sh
+2. Make a prediction: ./make_prediction ( keep original PORT=8000 )
 
 ### deploying and running the app to a  kubernetes cluster locally
 
- - Software requirements:
-    Docker
-    Minikube
-    Kubernetes
-    curl
-    Docker Hub account
+ - Software requirements: Docker, Minikube, Kubernetes, curl, Docker Hub account
+ - The container have to be build previusly with: docker build --tag=udaproject4 .
 
- -  Other requirements:
-    The container have to be build previusly with:
-        docker build --tag=udaproject4 .
-
-
-1. Upload the container to docker hub:
-    ./upload_docker.sh
-2. Deploy and run the app with kubernetes:
-    ./run_kubernetes.sh
-3. Make a prediction:
-    ./make_prediction ( keep original PORT=8000 )
+1. Upload the container to docker hub: ./upload_docker.sh
+2. Deploy and run the app with kubernetes: ./run_kubernetes.sh
+3. Make a prediction: ./make_prediction ( keep original PORT=8000 )
