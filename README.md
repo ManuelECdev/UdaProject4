@@ -28,11 +28,11 @@ This script is for uploading the docker container to docker hub.
 
 * run_kubernetes.sh
 
-This script is for depploying the app in a kubernetes cluster locally.
+This script is for deploying the app in a kubernetes cluster locally.
 
 * requirements.txt
 
-This file is for defining the required dependecies.
+This file is for defining the required dependencies.
 
 * .circleci/config.yml
 
@@ -40,12 +40,13 @@ This is file is used to give continuous integration capabilities to the app.
 
 * make_prediction.sh
 
-This is sript to make a request to the model to get a prediction.
+This script is to make a request to the model to get a prediction.
 
 
 ## Run the app locally as standalone.
 
 - Software requirements:
+    pylint
     Python3
     curl
 
