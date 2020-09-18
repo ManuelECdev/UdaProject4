@@ -1,4 +1,4 @@
-[![manuelecdev](https://circleci.com/gh/manuelecdev/UdaProject4.svg?style=svg)](https://circleci.com/gh/manuelecdev/UdaProject4)
+[![Build Status](https://circleci.com/gh/manuelecdev/UdaProject4.svg?style=svg)](https://circleci.com/gh/manuelecdev/UdaProject4)
 
 ## Project Overview
 
