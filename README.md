@@ -20,7 +20,7 @@ Your project goal is to operationalize this working, machine learning microservi
 
 **The final implementation of the project will showcase your abilities to operationalize production microservices.**
 
----
+
 
 ## Setup the Environment
 
