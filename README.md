@@ -60,9 +60,9 @@ This script is to make a request to the model to get a prediction.
 1. Run in Docker:  ./run_docker.sh
 2. Make a prediction: ./make_prediction ( keep original PORT=8000 )
 
-### deploying and running the app to a  kubernetes cluster locally
+### Deploying and running the app to a  kubernetes cluster locally
 
- - Software requirements: Docker, Minikube, Kubernetes, curl, Docker Hub account
+ - Software requirements: Docker, Minikube, Kubernetes, curl and Docker Hub account
  - The container have to be build previusly with: docker build --tag=udaproject4 .
 
 1. Upload the container to docker hub: ./upload_docker.sh
